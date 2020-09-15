@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Ivan Dyakonov](https://up.htmlacademy.ru/htmlcss/29/user/1601263).
-* Наставник: `Неизвестно`.
+* Наставник: [Алексей Пудников](https://htmlacademy.ru/profile/id71418).
 
 ---
 
