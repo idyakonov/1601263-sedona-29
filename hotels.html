@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Седона</title>
+</head>
+
+<body>
+  <header>
+    <a href="index.html">
+      <img src="logo.svg" alt="Логотип сайта городка Седона">
+    </a>
+    <nav>
+      <ul>
+        <li><a href="">Информация</a></li>
+        <li><a href="">Фото и видео</a></li>
+        <li><a href="">Карта штата</a></li>
+        <li><a href="">Гостиницы</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Отели города Седона</h1>
+    <section>
+      <h2>Фильтр отелей</h2>
+      <!--Здесь будет форма фильтра-->
+    </section>
+
+    <section>
+      <h2>Список отелей</h2>
+      
+      <div>
+        <p>Найдено: 3</p>
+        <p>Сортировка:</p>
+        <div>
+          <label>
+            <input type="radio" name="sorting-type" value="price" checked> По цене
+          </label>
+          <label>
+            <input type="radio" name="sorting-type" value="type"> По типу
+          </label>
+          <label>
+            <input type="radio" name="sorting-type" value="rating"> По рейтингу
+          </label>
+        </div>
+        <div>
+          <label>
+            <input type="radio" name="sorting-direction" value="asc"> По возрастанию
+          </label>
+          <label>
+            <input type="radio" name="sorting-direction" value="desc" checked> По убыванию
+          </label>
+        </div>
+      </div>
+
+      <ul>
+        <li>
+          <article>
+            <h3>Amara Resort & Spa</h3>
+            <img src="https://via.placeholder.com/135x90" alt="Amara Resort & Spa image">
+            <p>Гостиница от 4000 р.</p>
+            <p>Рейтинг: 8,5</p>
+            <button>Подробнее</button>
+            <button>Забронировать</button>
+          </article>
+        </li>
+        <li>
+          <article>
+            <h3>Desert Quail Inn</h3>
+            <img src="https://via.placeholder.com/135x90" alt="Desert Quail Inn image">
+            <p>Мотель от 3000 р.</p>
+            <p>Рейтинг: 8,9</p>
+            <button>Подробнее</button>
+            <button>Забронировать</button>
+          </article>
+        </li>
+        <li>
+          <article>
+            <h3>Villas at Poco Diablo</h3>
+            <img src="https://via.placeholder.com/135x90" alt="Villas at Poco Diablo image">
+            <p>Апартаменты от 2000 р.</p>
+            <p>Рейтинг: 9,2</p>
+            <button>Подробнее</button>
+            <button>Забронировать</button>
+          </article>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <div>
+      <h2>Контакты</h2>
+      <p>#visitSEDONA</p>
+      <a href="tel:+74956660166">ТЕЛ: +7(495) 666-01-66</a>
+    </div>
+
+    <div>
+      <h2>Социальные сети</h2>
+      <ul>
+        <li>
+          <a href="">Twitter</a>
+        </li>
+        <li>
+          <a href="">Facebook</a>
+        </li>
+        <li>
+          <a href="">YouTube</a>
+        </li>
+      </ul>
+    </div>
+
+    <p>Website by <a href="https://htmlacademy.ru">HTML Academy</a></p>
+  </footer>
+</body>
+
+</html>
