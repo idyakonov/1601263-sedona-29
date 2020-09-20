@@ -30,28 +30,23 @@
 
     <section>
       <h2>Список отелей</h2>
-      
+
       <div>
         <p>Найдено: 3</p>
         <p>Сортировка:</p>
         <div>
-          <label>
-            <input type="radio" name="sorting-type" value="price" checked> По цене
-          </label>
-          <label>
-            <input type="radio" name="sorting-type" value="type"> По типу
-          </label>
-          <label>
-            <input type="radio" name="sorting-type" value="rating"> По рейтингу
-          </label>
+          <input type="radio" id="sorting-type-price" name="sorting-type" value="price" checked/> 
+          <label for="sorting-type-price">По цене</label>
+          <input type="radio" id="sorting-type-type" name="sorting-type" value="type"/>
+          <label for="sorting-type-type">По типу</label>
+          <input type="radio" id="sorting-type-rating" name="sorting-type" value="rating"/> 
+          <label for="sorting-type-rating">По рейтингу</label>
         </div>
         <div>
-          <label>
-            <input type="radio" name="sorting-direction" value="asc"> По возрастанию
-          </label>
-          <label>
-            <input type="radio" name="sorting-direction" value="desc" checked> По убыванию
-          </label>
+          <input type="radio" id="sorting-direction-asc" name="sorting-direction" value="asc"/> 
+          <label for="sorting-direction-asc">По возрастанию</label>
+          <input type="radio" id="sorting-direction-desc" name="sorting-direction" value="desc" checked/>
+          <label for="sorting-direction-desc">По убыванию</label>
         </div>
       </div>
 
