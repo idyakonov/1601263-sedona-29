@@ -1,17 +1,17 @@
 :root {
-  --basic-black: #000000;
-  --basic-white: #ffffff;
-  --basic-dark: #333333;
-  --basic-grey: #F2F2F2;
-  --basic-extra-grey: #EEEEEE;
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-dark: #333333;
+  --color-grey: #F2F2F2;
+  --color-extra-grey: #EEEEEE;
 
-  --basic-light-brown: #766357;
-  --basic-brown: #604E43;
-  --basic-dark-brown: #503E33;
+  --color-light-brown: #766357;
+  --color-brown: #604E43;
+  --color-dark-brown: #503E33;
 
-  --basic-light-blue: #81B3D2;
-  --basic-blue: #669EC0;
-  --basic-dark-blue: #5496BD;
+  --color-light-blue: #81B3D2;
+  --color-blue: #669EC0;
+  --color-dark-blue: #5496BD;
 }
 
 @font-face {
@@ -32,6 +32,16 @@
     url("../fonts/ptsans.woff") format("woff"),
 }
 
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
 body {
   min-width: 1200px;
   margin: 0;
@@ -40,15 +50,15 @@ body {
   font-size: 14px;
   line-height: 24px;
   font-weight: 400;
-  color: var(--basic-black);
+  color: var(--color-black);
   text-transform: uppercase;
 }
 
-a {
+.link {
   text-decoration: none;
 }
 
-img {
+.image {
   max-width: 100%;
   height: auto;
 }
@@ -59,40 +69,34 @@ img {
   font-size: 14px;
   font-weight: 700;
   line-height: 26px;
-  color: var(--basic-white);
-}
-
-.site-navigation {
-  list-style: none;
+  color: var(--color-white);
 }
 
 .site-navigation-current a:not([href]) {
-  background-color: var(--basic-light-brown);
+  background-color: var(--color-light-brown);
 }
 
-.site-navigation a {
-  color: var(--basic-black);
+.page-link {
+  color: var(--color-black);
 }
 
-.site-navigation a:hover,
-.site-navigation a:focus {
-  color: var(--basic-light-blue);
+.page-link:hover,
+.page-link:focus {
+  color: var(--color-light-blue);
 }
 
-.site-navigation a:active {
+.page-link:active {
   opacity: 0.3;
-  color: var(--basic-black)
-}
-
-.advantages-list,
-.extra-advantages-list {
-  list-style: none;
+  color: var(--color-black)
 }
 
 /* Main */
+.list-unstyled {
+  list-style: none;
+}
 
 .page {
-  background-color: var(--basic-grey);
+  background-color: var(--color-grey);
 }
 
 .main-description {
@@ -100,17 +104,13 @@ img {
 }
 
 .container {
-  background-color: var(--basic-white);
+  background-color: var(--color-white);
   box-shadow: 0px 5px 15px rgba(0, 1, 1, 0.2);
   width: 1200px;
   margin: 0 auto;
 }
 
-.main-description,
-.booking-request,
-.booking,
-.advantage-description,
-.extra-advantage {
+.text-center {
   text-align: center;
 }
 
@@ -119,30 +119,31 @@ img {
   width: 400px;
 }
 
-.advantage-description {
-  background-color: var(--basic-extra-grey);
-}
-
-.advantage-item:nth-child(-n+2) .advantage-description {
-  background-color: var(--basic-light-blue);
-  color: var(--basic-white);
-}
-
-.advantage-item:nth-child(n+3) p {
-  color: var(--basic-dark);
-}
-
-.extra-advantage {
-  background-color: var(--basic-white);
-}
-
-.advantages {
+.advantage {
   line-height: 21px;
 }
 
-.advantages h4,
-.advantages h3 {
+.advantage-title {
   font-size: 21px;
+  color: inherit;
+}
+
+.advantage-item:nth-child(-n+2) .advantage-description {
+  background-color: var(--color-light-blue);
+  color: var(--color-white);
+}
+
+.advantage-item:nth-child(n+3) .advantage-description {
+  background-color: var(--color-light-grey); 
+  color: var(--color-dark);
+}
+
+.extra-advantage p {
+  color: var(--color-dark);
+}
+
+.booking-title {
+  font-size: 30px;
 }
 
 /* Button */
@@ -151,36 +152,36 @@ img {
   font-size: 21px;
   line-height: 26px;
   text-align: center;
-  color: var(--basic-white);
+  color: var(--color-white);
   vertical-align: middle;
   text-transform: uppercase;
   border: none;
 }
 
 .button-search {
-  background-color: var(--basic-light-blue);
+  background-color: var(--color-light-blue);
 }
 
 .button-open-popup {
-  background-color: var(--basic-light-brown);
+  background-color: var(--color-light-brown);
 }
 
 .button-search:hover,
 .button-search:focus {
-  background-color: var(--basic-blue);
+  background-color: var(--color-blue);
 }
 
 .button-search:active {
-  background-color: var(--basic-dark-blue);
+  background-color: var(--color-dark-blue);
 }
 
 .button-open-popup:hover,
 .button-open-popup:focus {
-  background-color: var(--basic-brown);
+  background-color: var(--color-brown);
 }
 
 .bbutton-open-popup:active {
-  background-color: var(--basic-dark-brown);
+  background-color: var(--color-dark-brown);
 }
 
 .button:active span {
@@ -201,8 +202,3 @@ img {
   font-size: 21px;
   font-weight: 700;
 }
-
-.footer-social ul {
-  list-style: none;
-}
-
