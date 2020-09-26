@@ -4,111 +4,117 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body>
-  <header>
-    <a href="index.html">
-      <img src="logo.svg" alt="Логотип сайта городка Седона">
-    </a>
-    <nav>
-      <ul>
-        <li><a href="">Информация</a></li>
-        <li><a href="">Фото и видео</a></li>
-        <li><a href="">Карта штата</a></li>
-        <li><a>Гостиницы</a></li>
-      </ul>
-    </nav>
-  </header>
+<body class="page">
+  <div class="container">
+    <header class="main-header">
+      <a class="main-header-logo">
+        <img src="" alt="Логотип сайта городка Седона">
+      </a>
+      <nav class="main-navigation" style>
+        <ul class="site-navigation list-unstyled text-uppercase">
+          <li class="navigation-item"><a class="link page-link" href="">Информация</a></li>
+          <li class="navigation-item"><a class="link page-link" href="">Фото и видео</a></li>
+          <li class="navigation-item"><a class="link page-link" href="">Карта штата</a></li>
+          <li class="navigation-item"><a class="link page-link">Гостиницы</a></li>
+        </ul>
+      </nav>
+    </header>
 
-  <main>
-    <h1>Отели города Седона</h1>
-    <section>
-      <h2>Фильтр отелей</h2>
-      <!--Здесь будет форма фильтра-->
-    </section>
+    <main>
+      <h1 hidden>Отели города Седона</h1>
+      <section class="hotels-filter">
+        <h2>Фильтр отелей</h2>
+        <!--Здесь будет форма фильтра-->
+      </section>
 
-    <section>
-      <h2>Список отелей</h2>
+      <section class="hotels-result">
+        <h2 hidden>Список отелей</h2>
 
-      <div>
-        <p>Найдено: 3</p>
-        <p>Сортировка:</p>
-        <div>
-          <input type="radio" id="sorting-type-price" name="sorting-type" value="price" checked/> 
-          <label for="sorting-type-price">По цене</label>
-          <input type="radio" id="sorting-type-type" name="sorting-type" value="type"/>
-          <label for="sorting-type-type">По типу</label>
-          <input type="radio" id="sorting-type-rating" name="sorting-type" value="rating"/> 
-          <label for="sorting-type-rating">По рейтингу</label>
+        <div class="hotels-sorting text-uppercase">
+          <h3 class="hotels-count">Найдено: 3</h3>
+          <p>Сортировка:</p>
+          <div class="hotels-sorting-type">
+            <input type="radio" id="sorting-type-price" name="sorting-type" class="sorting-type radio-button-unstyled" value="price" checked />
+            <label for="sorting-type-price">По цене</label>
+            <input type="radio" id="sorting-type-type" name="sorting-type" class="sorting-type radio-button-unstyled" value="type" />
+            <label for="sorting-type-type">По типу</label>
+            <input type="radio" id="sorting-type-rating" name="sorting-type" class="sorting-type radio-button-unstyled" value="rating" />
+            <label for="sorting-type-rating">По рейтингу</label>
+          </div>
+          <div class="hotels-sorting-direction">
+            <input type="radio" id="sorting-direction-asc" name="sorting-direction" class="sorting-direction" value="asc" />
+            <label for="sorting-direction-asc">По возрастанию</label>
+            <input type="radio" id="sorting-direction-desc" name="sorting-direction" class="sorting-direction" value="desc" checked />
+            <label for="sorting-direction-desc">По убыванию</label>
+          </div>
         </div>
-        <div>
-          <input type="radio" id="sorting-direction-asc" name="sorting-direction" value="asc"/> 
-          <label for="sorting-direction-asc">По возрастанию</label>
-          <input type="radio" id="sorting-direction-desc" name="sorting-direction" value="desc" checked/>
-          <label for="sorting-direction-desc">По убыванию</label>
-        </div>
+
+        <ul class="hotels-list list-unstyled">
+          <li class="hotels-item">
+            <article class="hotel text-uppercase">
+              <h3 class="hotel-name">Amara Resort & Spa</h3>
+              <img src="https://via.placeholder.com/135x90" alt="Amara Resort & Spa image">
+              <p>Гостиница от 4000 р.</p>
+              <p>Рейтинг: 8,5</p>
+              <button class="button button-hotel-info"><span>Подробнее</span></button>
+              <button class="button button-hotel-book"><span>Забронировать</span></button>
+            </article>
+          </li>
+          <li class="hotels-item">
+            <article class="hotel text-uppercase">
+              <h3 class="hotel-name">Desert Quail Inn</h3>
+              <img src="https://via.placeholder.com/135x90" alt="Desert Quail Inn image">
+              <p>Мотель от 3000 р.</p>
+              <p>Рейтинг: 8,9</p>
+              <button class="button button-hotel-info"><span>Подробнее</span></button>
+              <button class="button button-hotel-book"><span>Забронировать</span></button>
+            </article>
+          </li>
+          <li class="hotels-item">
+            <article class="hotel text-uppercase">
+              <h3 class="hotel-name">Villas at Poco Diablo</h3>
+              <img src="https://via.placeholder.com/135x90" alt="Villas at Poco Diablo image">
+              <p>Апартаменты от 2000 р.</p>
+              <p>Рейтинг: 9,2</p>
+              <button class="button button-hotel-info"><span>Подробнее</span></button>
+              <button class="button button-hotel-book"><span>Забронировать</span></button>
+            </article>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="main-footer">
+      <div class="contacts">
+        <h2 hidden>Контакты</h2>
+        <p class="footer-tag">#visitSEDONA</p>
+        <a class="footer-phone link" href="tel:+74956660166">ТЕЛ: +7(495) 666-01-66</a>
       </div>
 
-      <ul>
-        <li>
-          <article>
-            <h3>Amara Resort & Spa</h3>
-            <img src="https://via.placeholder.com/135x90" alt="Amara Resort & Spa image">
-            <p>Гостиница от 4000 р.</p>
-            <p>Рейтинг: 8,5</p>
-            <button>Подробнее</button>
-            <button>Забронировать</button>
-          </article>
-        </li>
-        <li>
-          <article>
-            <h3>Desert Quail Inn</h3>
-            <img src="https://via.placeholder.com/135x90" alt="Desert Quail Inn image">
-            <p>Мотель от 3000 р.</p>
-            <p>Рейтинг: 8,9</p>
-            <button>Подробнее</button>
-            <button>Забронировать</button>
-          </article>
-        </li>
-        <li>
-          <article>
-            <h3>Villas at Poco Diablo</h3>
-            <img src="https://via.placeholder.com/135x90" alt="Villas at Poco Diablo image">
-            <p>Апартаменты от 2000 р.</p>
-            <p>Рейтинг: 9,2</p>
-            <button>Подробнее</button>
-            <button>Забронировать</button>
-          </article>
-        </li>
-      </ul>
-    </section>
-  </main>
+      <div class="footer-social">
+        <h2 hidden>Социальные сети</h2>
+        <ul class="list-unstyled">
+          <li>
+            <a class="social-button link" href=""><span>Twitter</span></a>
+          </li>
+          <li>
+            <a class="social-button link" href=""><span>Facebook</span></a>
+          </li>
+          <li>
+            <a class="social-button link" href=""><span>YouTube</span></a>
+          </li>
+        </ul>
+      </div>
 
-  <footer>
-    <div>
-      <h2>Контакты</h2>
-      <p>#visitSEDONA</p>
-      <a href="tel:+74956660166">ТЕЛ: +7(495) 666-01-66</a>
-    </div>
-
-    <div>
-      <h2>Социальные сети</h2>
-      <ul>
-        <li>
-          <a href="">Twitter</a>
-        </li>
-        <li>
-          <a href="">Facebook</a>
-        </li>
-        <li>
-          <a href="">YouTube</a>
-        </li>
-      </ul>
-    </div>
-
-    <p>Website by <a href="https://htmlacademy.ru">HTML Academy</a></p>
-  </footer>
+      <p class="footer-copyright">
+        Website by <a class="link" href="https://htmlacademy.ru">HTML Academy</a>
+      </p>
+    </footer>
+  </div>
 </body>
 
 </html>
