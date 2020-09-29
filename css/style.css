@@ -178,14 +178,14 @@ body {
   border-bottom: none;
 }
 
-.sorting-type:not(:checked):hover+label {
+.sorting-type:not(:checked):hover + label {
   color: var(--color-light-blue);
   opacity: 1;
   border-bottom: 1px dashed var(--color-light-blue);
   cursor: pointer;
 }
 
-.sorting-type:not(:checked):active+label {
+.sorting-type:not(:checked):active + label {
   color: var(--color-black);
   opacity: 1;
   border-bottom: none;
