@@ -77,6 +77,10 @@ body {
   color: var(--color-white);
 }
 
+.main-header {
+  height: 56px;
+}
+
 .site-navigation-current a:not([href]) {
   background-color: var(--color-light-brown);
 }
@@ -101,9 +105,35 @@ body {
   pointer-events: none;
 }
 
+.navigation-item {
+  text-align: center;
+}
+
 /* Main */
 .list-unstyled {
   list-style: none;
+  padding: 0;
+}
+
+.welcome-section {
+  background-image: url("../img/welcome-background.jpg");
+  height: 509px;
+  width: 1200px;
+  display: grid;
+  grid-template-rows: 1fr 57px;
+}
+
+.welcome-letters {
+  background: url("../img/letterings/welcome.svg") 50% 77px no-repeat, 
+    url("../img/letterings/gorgeous.svg") 50% 133px no-repeat,
+    url("../img/letterings/sedona.svg") 50% 215px no-repeat;
+}
+
+.welcome-footer {
+  background: url("../img/icons/welcome-footer.svg");
+  vertical-align: bottom;
+  height: 57px;
+  width: 1200px;
 }
 
 .page {
@@ -112,6 +142,16 @@ body {
 
 .main-description {
   line-height: 26px;
+  height: 215px;
+}
+
+.main-description h2{
+  margin-top: 0;
+  padding-top: 41px;
+  margin-bottom: 50px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 470px;
 }
 
 .container {
@@ -126,17 +166,37 @@ body {
 }
 
 .advantage-description,
+.advantage-image {
+  height: 256px;
+}
+
+.advantage-description,
 .extra-advantage {
   width: 400px;
+}
+
+.extra-advantage {
+  height: 256px;
 }
 
 .advantage {
   line-height: 21px;
 }
 
+.advantage p {
+  max-width: 300px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 .advantage-title {
   font-size: 21px;
   color: inherit;
+  max-width: 149px;
+  margin-top: 47px;
+  margin-bottom: 25px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .advantage-item:nth-child(-n+2) .advantage-description {
@@ -145,7 +205,7 @@ body {
 }
 
 .advantage-item:nth-child(n+3) .advantage-description {
-  background-color: var(--color-light-grey);
+  background-color: var(--color-extra-grey);
   color: var(--color-dark);
 }
 
@@ -153,26 +213,38 @@ body {
   color: var(--color-dark);
 }
 
+.booking-request {
+  height: 291px;
+  display: grid;
+  grid-template-rows: 1fr 86px;
+}
+
 .booking-title {
   font-size: 30px;
+  margin-top: 0;
+  padding-top: 58px;
+}
+
+.footer-copyright {
+  margin: auto 0;
 }
 
 .radio-button-unstyled {
   appearance: none;
 }
 
-.sorting-type+label {
+.sorting-type + label {
   color: var(--color-black);
   font-size: 12px;
   line-height: 18px;
   border-bottom: 1px dashed var(--color-black);
 }
 
-.sorting-type:not(:checked)+label {
+.sorting-type:not(:checked) + label {
   opacity: 0.3;
 }
 
-.sorting-type:checked+label {
+.sorting-type:checked + label {
   color: var(--color-light-blue);
   opacity: 1;
   border-bottom: none;
@@ -219,10 +291,6 @@ body {
 .hotels-sorting p {
   font-size: 12px;
   line-height: 18px;
-}
-
-.hotels-list {
-  padding: 0;
 }
 
 .hotels-item {
@@ -295,10 +363,24 @@ body {
   opacity: 0.3;
 }
 
+.button-open-popup {
+  height: 86px;
+  width: 568px;
+  padding: 0;
+  margin: 0 auto;
+}
+
 /* Footer */
 
 .main-footer {
   line-height: 26px;
+  height: 120px;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+}
+
+.footer-tag {
+  margin-bottom: 9px;
 }
 
 .footer-phone {
@@ -309,3 +391,59 @@ body {
   font-size: 21px;
   font-weight: 700;
 }
+
+/* Grid */
+.index-grid {
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+}
+
+.main-header-logo {
+  position: absolute;
+  left: 46%;
+  top: 0px;
+}
+
+.site-navigation {
+  display: grid;
+  grid-template-columns: 230px 230px 1fr 230px 230px;
+}
+
+.main-footer {
+  grid-row-start: 3;
+}
+
+.advantages-list {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+}
+
+.advantage-item:nth-child(-n+2) {
+  grid-column: 1 / -1;
+}
+
+.advantage {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(2, auto);
+}
+
+.advantage-description {
+  grid-row: 1 / 2;
+}
+
+.advantage-image {
+  grid-row: 1 / 2;
+  grid-column: 2 / -1;
+}
+
+.advantage-image.reverse {
+  grid-column: 1 / 3;
+}
+
+.social-links {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+}
+
+
